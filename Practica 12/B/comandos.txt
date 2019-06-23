@@ -1,0 +1,401 @@
+// Contraseña
+enable
+configure terminal
+enable secret abc
+line console 0
+password abc
+login
+banner motd #No Entres# login
+service password-encryption
+enable secret abc
+line vty 0 15
+password abc
+login
+banner motd #No Entres# login
+service password-encryption
+
+
+//Router 1
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R1
+
+
+int serial 0/1/0
+ip add 1.4.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.3.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.2.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 100
+neighbor 1.4.1.2  remote-as 400 
+neighbor 1.3.1.2  remote-as 300 
+neighbor 1.2.1.2  remote-as 200 
+
+synchronization 
+network 1.4.1.1  mask 255.255.255.252
+network 1.3.1.1  mask 255.255.255.252
+network 1.2.1.1  mask 255.255.255.252
+
+
+//Router 2
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R2
+
+
+int serial 0/3/0
+ip add 1.2.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/0
+ip add 1.5.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+
+
+router bgp 200
+neighbor 1.2.1.1  remote-as 100 
+neighbor 1.5.1.2  remote-as 500 
+
+synchronization 
+network 1.2.1.2  mask 255.255.255.252
+network 1.5.1.1  mask 255.255.255.252
+
+//Router 3
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R3
+
+
+int serial 0/3/1
+ip add 1.3.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.9.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/0
+ip add 1.10.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 300
+neighbor 1.3.1.1  remote-as 100 
+neighbor 1.9.1.2  remote-as 700 
+neighbor 1.10.1.2  remote-as 600 
+
+synchronization 
+network 1.3.1.2  mask 255.255.255.252
+network 1.9.1.1  mask 255.255.255.252
+network 1.10.1.1  mask 255.255.255.252
+
+//Router 4
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R4
+
+
+int serial 0/1/0
+ip add 1.4.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.8.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.7.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 400
+neighbor 1.4.1.1  remote-as 100 
+neighbor 1.8.1.2  remote-as 700 
+neighbor 1.7.1.2  remote-as 500 
+
+synchronization 
+network 1.4.1.2  mask 255.255.255.252
+network 1.8.1.1  mask 255.255.255.252
+network 1.7.1.1  mask 255.255.255.252
+
+
+//Router 5
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R5
+
+
+int serial 0/1/0
+ip add 1.5.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.7.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.11.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.6.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 500
+neighbor 1.5.1.1  remote-as 200 
+neighbor 1.7.1.1  remote-as 400 
+neighbor 1.11.1.1  remote-as 700 
+neighbor 1.6.1.2  remote-as 900 
+
+
+synchronization 
+network 1.5.1.2  mask 255.255.255.252
+network 1.7.1.2 mask 255.255.255.252
+network 1.11.1.2  mask 255.255.255.252
+network 1.6.1.1  mask 255.255.255.252
+
+
+//Router 6
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R6
+
+
+int serial 0/1/0
+ip add 1.10.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.13.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 600
+neighbor 1.10.1.1  remote-as 300 
+neighbor 1.13.1.2  remote-as 1000 
+
+synchronization 
+network 1.10.1.2  mask 255.255.255.252
+network 1.13.1.1  mask 255.255.255.252
+
+//Router 7
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R7
+
+
+int serial 0/1/1
+ip add 1.9.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/0
+ip add 1.12.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.11.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.8.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 700
+neighbor 1.9.1.1  remote-as 300 
+neighbor 1.12.1.2  remote-as 800 
+neighbor 1.11.1.2  remote-as 500 
+neighbor 1.8.1.1 remote-as 400 
+
+synchronization 
+network 1.9.1.2  mask 255.255.255.252
+network 1.12.1.1  mask 255.255.255.252
+network 1.11.1.1  mask 255.255.255.252
+network 1.8.1.2  mask 255.255.255.252
+
+//Router 8
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R8
+
+
+int serial 0/1/0
+ip add 1.12.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.14.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.15.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 800
+neighbor 1.12.1.1  remote-as 700 
+neighbor 1.14.1.2  remote-as 1000 
+neighbor 1.15.1.2  remote-as 900 
+
+synchronization 
+network 1.12.1.2  mask 255.255.255.252
+network 1.14.1.1  mask 255.255.255.252
+network 1.15.1.1  mask 255.255.255.252
+
+
+//Router 9
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R9
+
+
+int serial 0/3/0
+ip add 1.15.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.6.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+
+
+router bgp 900
+neighbor 1.15.1.1  remote-as 800 
+neighbor 1.6.1.1  remote-as 500 
+
+synchronization 
+network 1.15.1.2  mask 255.255.255.252
+network 1.6.1.2  mask 255.255.255.252
+
+//Router 10
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R10
+
+
+int serial 0/3/1
+ip add 1.13.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/0
+ip add 1.16.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.14.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router bgp 1000
+neighbor 1.13.1.1  remote-as 600 
+neighbor 1.16.1.2  remote-as 2000 
+neighbor 1.14.1.1  remote-as 800 
+
+synchronization 
+network 1.13.1.2  mask 255.255.255.252
+network 1.16.1.1  mask 255.255.255.252
+network 1.14.1.2  mask 255.255.255.252
+
+
+//Router 11
+enable
+clock set 19:00:00 19 November 2018
+config terminal
+No  IP  domain-lookup
+hostname R11
+
+
+int serial 0/1/0
+ip add 1.16.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+
+router bgp 2000
+neighbor 1.16.1.1  remote-as 1000 
+
+synchronization 
+network 1.16.1.2  mask 255.255.255.252
+
+

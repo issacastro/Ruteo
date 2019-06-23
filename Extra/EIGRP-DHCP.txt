@@ -1,0 +1,482 @@
+//Router 0
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R0
+
+int f 0/0
+ip add 128.12.3.46 255.255.255.240
+no shutdown
+ip helper-address 1.1.1.2
+exit
+
+int f 0/1
+ip add 128.12.3.30 255.255.255.224
+no shutdown
+ip helper-address 1.1.1.2
+exit 
+
+int serial 0/1/0
+ip add 1.1.1.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.1.0 0.0.0.3
+network 128.12.3.32 0.0.0.15
+network 128.12.3.0 0.0.0.31
+
+//Router 6
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R6
+
+int serial 0/1/0
+ip add 1.1.1.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.1.2.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.12.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.1.0 0.0.0.3
+network 1.1.2.0 0.0.0.3
+network 1.1.12.0 0.0.0.3
+
+ip dhcp pool REDA
+network 128.12.3.32 255.255.255.240
+default-route 128.12.3.46
+exit
+ip dhcp excluded-address 128.12.3.33
+ip dhcp excluded-address 128.12.3.46 128.12.3.47 
+
+ip dhcp pool REDB
+network 128.12.3.0 255.255.255.224
+default-route 128.12.3.30
+exit
+ip dhcp excluded-address 128.12.3.1
+ip dhcp excluded-address 128.12.3.30 128.12.3.31 
+
+ip dhcp pool REDC
+network 168.132.2.0 255.255.255.128
+default-route 168.132.2.126
+exit
+ip dhcp excluded-address 168.132.2.1
+ip dhcp excluded-address 168.132.2.126 168.132.2.127
+
+ip dhcp pool REDD
+network 168.132.2.128 255.255.255.192
+default-route 168.132.2.190
+exit
+ip dhcp excluded-address 168.132.2.129
+ip dhcp excluded-address 168.132.2.190 168.132.2.191
+
+ip dhcp pool REDE
+network 192.154.4.0 255.255.254.0
+default-route 192.154.5.254
+exit
+ip dhcp excluded-address 192.154.4.1
+ip dhcp excluded-address 192.154.5.254 192.154.5.255
+
+ip dhcp pool REDF
+network 192.154.0.0 255.255.252.0
+default-route 192.154.3.254
+exit
+ip dhcp excluded-address 192.154.0.1	
+ip dhcp excluded-address 192.154.3.254 192.154.3.255
+
+
+//Router 7
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R7
+
+int serial 0/1/0
+ip add 1.1.12.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.12.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.1.0 0.0.0.3
+network 1.1.2.0 0.0.0.3
+
+//Router 11
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R11
+
+int serial 0/1/0
+ip add 1.1.2.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.3.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+int serial 0/3/0
+ip add 1.1.4.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.1.5.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+router eigrp 1
+no auto-summary 
+network 1.1.2.0 0.0.0.3
+network 1.1.3.0 0.0.0.3
+network 1.1.4.0 0.0.0.3
+network 1.1.5.0 0.0.0.3
+
+
+//Router 1
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R1
+
+int f 0/0
+ip add 168.132.2.126 255.255.255.128
+no shutdown
+ip helper-address 1.1.1.2
+exit
+
+int f 0/1
+ip add 168.132.2.190 255.255.255.192
+no shutdown
+ip helper-address 1.1.1.2
+exit 
+
+int serial 0/1/0
+ip add 1.1.3.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.3.0 0.0.0.3
+network 168.132.2.0 0.0.0.127
+network 168.132.2.128 0.0.0.63
+
+//Router 2
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R2
+
+int f 0/0
+ip add 192.154.5.254 255.255.254.0
+no shutdown
+ip helper-address 1.1.1.2
+exit
+
+int f 0/1
+ip add 192.154.3.254 255.255.252.0
+no shutdown
+ip helper-address 1.1.1.2
+exit 
+
+int serial 0/1/0
+ip add 1.1.4.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.4.0 0.0.0.3
+network 192.154.4.0 0.0.1.255
+network 192.154.0.0 0.0.3.255
+
+
+//Router 7
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R7
+
+int serial 0/1/0
+ip add 1.1.12.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.11.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.11.0 0.0.0.3
+network 1.1.12.0 0.0.0.3
+
+
+//Router 8
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R8
+
+int serial 0/1/0
+ip add 1.1.11.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.9.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+int serial 0/3/0
+ip add 1.1.8.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.1.10.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+router eigrp 1
+no auto-summary 
+network 1.1.11.0 0.0.0.3
+network 1.1.9.0 0.0.0.3
+network 1.1.8.0 0.0.0.3
+network 1.1.10.0 0.0.0.3
+
+
+
+//Router 10
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R10
+
+int serial 0/1/0
+ip add 1.1.8.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/3/1
+ip add 1.1.5.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.6.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.8.0 0.0.0.3
+network 1.1.5.0 0.0.0.3
+network 1.1.6.0 0.0.0.3
+
+ip dhcp pool REDG
+network 148.170.0.0 255.255.255.192
+default-route 148.170.0.62
+exit
+ip dhcp excluded-address 148.170.0.1
+ip dhcp excluded-address 148.170.0.62 148.170.0.63
+
+ip dhcp pool REDH
+network 148.170.0.64 255.255.255.224
+default-route 148.170.0.94
+exit
+ip dhcp excluded-address 148.170.0.65
+ip dhcp excluded-address 148.170.0.94 148.170.0.95
+
+ip dhcp pool REDI
+network 172.14.0.0 255.255.255.128
+default-route 172.14.0.126
+exit
+ip dhcp excluded-address 172.14.0.1
+ip dhcp excluded-address 172.14.0.126 172.14.0.127
+
+ip dhcp pool REDJ
+network 172.14.0.128 255.255.255.192
+default-route 172.14.0.190
+exit
+ip dhcp excluded-address 172.14.0.129
+ip dhcp excluded-address 1172.14.0.190 172.14.0.191
+
+ip dhcp pool REDK
+network 164.3.0.0 255.255.255.0
+default-route 164.3.0.254
+exit
+ip dhcp excluded-address 164.3.0.1
+ip dhcp excluded-address 164.3.0.254 164.3.0.255
+
+ip dhcp pool REDL
+network 164.3.1.0 255.255.255.128
+default-route 164.3.1.126
+exit
+ip dhcp excluded-address 164.3.1.1	
+ip dhcp excluded-address 164.3.1.126 164.3.1.127
+
+//Router 4
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R4
+
+int f 0/0
+ip add 172.14.0.126 255.255.255.128
+no shutdown
+ip helper-address 1.1.8.1
+exit
+
+int f 0/1
+ip add 172.14.0.190 255.255.255.192
+no shutdown
+ip helper-address 1.1.8.1
+exit 
+
+int serial 0/1/0
+ip add 1.1.10.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.10.0 0.0.0.3
+network 172.14.0.0 0.0.0.127
+network 172.14.0.128 0.0.0.63
+
+//Router 3
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R3
+
+int f 0/0
+ip add 148.170.0.62 255.255.255.192
+no shutdown
+ip helper-address 1.1.8.1
+exit
+
+int f 0/1
+ip add 148.170.0.94 255.255.255.224
+no shutdown
+ip helper-address 1.1.8.1
+exit 
+
+int serial 0/1/0
+ip add 1.1.9.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.9.0 0.0.0.3
+network 148.170.0.0 0.0.0.63
+network 148.170.0.64 0.0.0.31
+
+
+//Router 9
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R9
+
+int serial 0/1/0
+ip add 1.1.6.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+int serial 0/1/1
+ip add 1.1.7.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.6.0 0.0.0.3
+network 1.1.7.0 0.0.0.3
+
+//Router 5
+enable
+clock set 19:00:00 12 June 2018
+config terminal
+No  IP  domain-lookup
+hostname R5
+
+int f 0/0
+ip add 164.3.0.254 255.255.255.0
+no shutdown
+ip helper-address 1.1.8.1
+exit
+
+int f 0/1
+ip add 164.3.1.126 255.255.255.128
+no shutdown
+ip helper-address 1.1.8.1
+exit 
+
+int serial 0/1/0
+ip add 1.1.7.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary 
+network 1.1.7.0 0.0.0.3
+network 164.3.0.0 0.0.0.255
+network 164.3.1.0 0.0.0.127

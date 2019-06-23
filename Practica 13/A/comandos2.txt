@@ -1,0 +1,50 @@
+//Router 0
+enable
+clock set 19:00:00 26 Novermber 2018
+config terminal
+No  IP  domain-lookup
+hostname R0
+
+int f 0/0
+ip add 192.168.1.1 255.255.255.0
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 192.168.2.5 255.255.255.0
+clock rate 9600
+no shutdown
+exit
+
+router rip
+version 2
+no auto-summary 
+network 192.168.1.0
+network 192.168.2.0
+
+
+//Router 1
+enable
+clock set 19:00:00 26 Novermber 2018
+config terminal
+No  IP  domain-lookup
+hostname R1
+
+int f 0/0
+ip add 172.20.2.1 255.255.255.0
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 192.168.2.10 255.255.255.0
+clock rate 9600
+no shutdown
+exit
+
+router rip
+version 2
+no auto-summary 
+network 172.20.2.0
+network 192.168.2.0
+
+

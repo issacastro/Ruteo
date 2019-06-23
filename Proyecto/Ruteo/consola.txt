@@ -1,0 +1,124 @@
+----------------------------
+-------------Router 0-------
+enable
+config terminal
+no ip domain-lookup
+ip name-server 172.12.6.5
+hostname Administracion
+interface g0/0
+IP address 192.96.32.1 255.255.255.0
+no shutdown
+exit
+
+interface se0/0/0
+IP address 1.2.3.1 255.255.255.252
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary
+network 192.96.32.0 0.0.0.255 
+network 1.2.3.0 0.0.0.3 
+exit
+config terminal
+ip dhcp pool DHCP1
+network 192.96.32.0 255.255.255.0
+default-route 192.96.32.1
+exit
+ip dhcp excluded-address 192.96.32.1 192.96.32.15
+
+-------------Router 1-------
+enable
+config terminal
+no ip domain-lookup
+ip name-server 172.12.6.5
+hostname Servicios
+int g0/0
+IP address 172.12.6.1 255.255.255.0
+no shutdown
+exit
+
+
+interface se 0/0/0
+IP address 1.2.3.2 255.255.255.252
+no shutdown
+exit
+
+interface se 0/0/1
+IP address 1.4.2.1 255.255.255.252
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary
+network 172.12.6.0 0.0.0.255 
+network 1.2.3.0 0.0.0.3 
+network 1.4.2.0 0.0.0.3 
+exit
+-------------Router 2-------
+enable
+config terminal
+no ip domain-lookup
+ip name-server 172.12.6.5
+hostname Clientes
+interface g0/0
+IP address 110.26.13.1 255.255.255.0
+no shutdown
+ip helper-address 1.4.1.1
+exit
+
+interface se0/0/0
+IP address 1.4.2.2 255.255.255.252
+no shutdown
+exit
+
+router eigrp 1
+no auto-summary
+network 110.26.13.0 0.0.0.255 
+network 1.4.2.0 0.0.0.3 
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+------------S1--------------
+clock set 23:30:00 28 august 2018
+enable
+config terminal
+no ip domain-lookup
+hostname S1
+interface vlan 99
+ip address 192.96.32.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.96.32.1
+------------S2--------------
+clock set 23:30:00 28 august 2018
+enable
+config terminal
+no ip domain-lookup
+hostname S2
+interface vlan 99
+ip address 172.12.6.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 172.12.6.1
+------------S3--------------
+clock set 23:30:00 28 august 2018
+enable
+config terminal
+no ip domain-lookup
+hostname S3
+interface vlan 99
+ip address 110.26.13.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 110.26.13.1

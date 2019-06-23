@@ -1,0 +1,717 @@
+----------------------------------------------------------
+					Reporte de Datagramas
+----------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Total de Paquetes Capturados    :100 
+Total de Paquetes No Analizados :59 
+    |-ICMPv4 :0 
+    |-IGMP   :2 
+    |-IP     :0 
+    |-TCP    :10 
+    |-UDP    :29 
+    |-IPv6   :0 
+    |-OSPF   :0 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Datagrama 1 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 0.0.0.0 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 329 Bytes
+   |-ID Datagrama           : 0 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 309 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 308 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 3 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.192.1 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 328 Bytes
+   |-ID Datagrama           : 0 
+   |-Tiempo de Vida         : 128 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 308 
+   |-Tipo de Servicio       : Diferenciado Intertnet (XXXXX0) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 307 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 4 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.22 
+   |-Longitud de Cabezara   : 24 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 0 
+   |-Tiempo de Vida         : 1 
+   |-Protocolo de Capa Sup  : IGMP 
+   |-Longitud Carga Util    : 16 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 271 
+   |-Opciones               : Datagrama con opciones 
+   |-Copia                  : En el primer fragmento 
+   |-Clase                  : Depuracion y mantenimiento 
+   |-Numero                 :  
+----------------------------------------------------------
+
+Datagrama 5 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 146 Bytes
+   |-ID Datagrama           : 64673 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 126 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 381 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 6 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 120 Bytes
+   |-ID Datagrama           : 64676 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 100 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 355 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 10 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 100.87.192.1 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 63 Bytes
+   |-ID Datagrama           : 16991 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 43 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 298 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 11 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 100.87.192.1 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 63 Bytes
+   |-ID Datagrama           : 16992 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 43 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 298 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 13 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.192.1 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 100 Bytes
+   |-ID Datagrama           : 63339 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 80 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 79 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 15 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.192.1 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 314 Bytes
+   |-ID Datagrama           : 38398 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 294 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 293 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 16 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 138.201.81.199 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 60 Bytes
+   |-ID Datagrama           : 2369 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 40 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 295 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 17 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 120 Bytes
+   |-ID Datagrama           : 64746 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 100 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 355 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 19 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.22 
+   |-Longitud de Cabezara   : 24 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 0 
+   |-Tiempo de Vida         : 1 
+   |-Protocolo de Capa Sup  : IGMP 
+   |-Longitud Carga Util    : 16 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 271 
+   |-Opciones               : Datagrama con opciones 
+   |-Copia                  : En el primer fragmento 
+   |-Clase                  : Depuracion y mantenimiento 
+   |-Numero                 :  
+----------------------------------------------------------
+
+Datagrama 20 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 138.201.81.199 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 44 Bytes
+   |-ID Datagrama           : 0 
+   |-Tiempo de Vida         : 43 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 24 
+   |-Tipo de Servicio       : Diferenciado Intertnet (XXXXX0) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 279 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 21 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 138.201.81.199 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 2370 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 20 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 275 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 22 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 138.201.81.199 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 139 Bytes
+   |-ID Datagrama           : 2371 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 119 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 374 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 23 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 120 Bytes
+   |-ID Datagrama           : 64767 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 100 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 355 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 26 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 108 Bytes
+   |-ID Datagrama           : 64781 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 88 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 343 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 27 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 138.201.81.199 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 14301 
+   |-Tiempo de Vida         : 43 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 20 
+   |-Tipo de Servicio       : Diferenciado Intertnet (XXXXX0) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 275 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 28 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 138.201.81.199 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 250 Bytes
+   |-ID Datagrama           : 14302 
+   |-Tiempo de Vida         : 43 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 230 
+   |-Tipo de Servicio       : Diferenciado Intertnet (XXXXX0) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 485 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 29 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 138.201.81.199 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 2372 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 20 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 275 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 30 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 138.201.81.199 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 14303 
+   |-Tiempo de Vida         : 43 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 20 
+   |-Tipo de Servicio       : Diferenciado Intertnet (XXXXX0) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 275 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 31 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 138.201.81.199 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 2373 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 20 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 275 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 32 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 146 Bytes
+   |-ID Datagrama           : 64792 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 126 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 381 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 45 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.212.141 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 208 Bytes
+   |-ID Datagrama           : 14935 
+   |-Tiempo de Vida         : 128 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 188 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 187 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 46 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.212.141 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 208 Bytes
+   |-ID Datagrama           : 14937 
+   |-Tiempo de Vida         : 128 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 188 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 187 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 47 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.212.141 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 208 Bytes
+   |-ID Datagrama           : 14938 
+   |-Tiempo de Vida         : 128 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 188 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 187 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 49 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 138.201.81.199 
+   |-Direccion de Destino   : 100.87.211.170 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 40 Bytes
+   |-ID Datagrama           : 14304 
+   |-Tiempo de Vida         : 43 
+   |-Protocolo de Capa Sup  : TCP 
+   |-Longitud Carga Util    : 20 
+   |-Tipo de Servicio       : Diferenciado Intertnet (XXXXX0) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 275 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 57 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 177 Bytes
+   |-ID Datagrama           : 64891 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 157 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 412 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 58 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 67 Bytes
+   |-ID Datagrama           : 64892 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 47 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 302 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 64 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 177 Bytes
+   |-ID Datagrama           : 64948 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 157 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 412 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 65 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 92 Bytes
+   |-ID Datagrama           : 64961 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 72 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 327 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 67 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 177 Bytes
+   |-ID Datagrama           : 64965 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 157 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 412 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 68 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 67 Bytes
+   |-ID Datagrama           : 64966 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 47 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 302 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 70 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.212.237 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 209 Bytes
+   |-ID Datagrama           : 61490 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 189 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 444 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 71 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 165 Bytes
+   |-ID Datagrama           : 65008 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 145 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 400 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 77 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.16 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 326 Bytes
+   |-ID Datagrama           : 22968 
+   |-Tiempo de Vida         : 128 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 306 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : No Fragmentado 
+   |-Primer Byte            : 0 
+   |-Ultimo Byte            : 305 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 78 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 146 Bytes
+   |-ID Datagrama           : 65038 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 126 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 381 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 82 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 165 Bytes
+   |-ID Datagrama           : 65143 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 145 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 400 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 86 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 108 Bytes
+   |-ID Datagrama           : 65299 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 88 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 343 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 96 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.211.170 
+   |-Direccion de Destino   : 224.0.0.251 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 165 Bytes
+   |-ID Datagrama           : 65331 
+   |-Tiempo de Vida         : 255 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 145 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 400 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------
+
+Datagrama 100 
+Analisis de Datagrama 
+   |-Direccion de Origen    : 100.87.218.14 
+   |-Direccion de Destino   : 255.255.255.255 
+   |-Longitud de Cabezara   : 20 Bytes
+   |-Longitud de Total      : 68 Bytes
+   |-ID Datagrama           : 23908 
+   |-Tiempo de Vida         : 64 
+   |-Protocolo de Capa Sup  : UDP 
+   |-Longitud Carga Util    : 48 
+   |-Tipo de Servicio       : Precedencia(XXX000) 
+   |-Fragmentacion          : Ultimo fragmento 
+   |-Primer Byte            : 256 
+   |-Ultimo Byte            : 303 
+   |-Opciones               : Datagrama sin opciones 
+----------------------------------------------------------

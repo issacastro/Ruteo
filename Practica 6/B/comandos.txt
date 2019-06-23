@@ -1,0 +1,137 @@
+// Contraseña
+enable
+configure terminal
+enable secret abc
+line console 0
+password abc
+login
+banner motd #No Entres# login
+service password-encryption
+enable secret abc
+line vty 0 15
+password abc
+login
+banner motd #No Entres# login
+service password-encryption
+
+
+
+//Configurar Router
+enable
+clock set 19:00:00 25 september 2018
+config terminal
+No  IP  domain-lookup
+ipv6 unicast-routing
+hostname R1
+interface fastethernet 0/0
+ipv6 address 2001:DAD:6144:6::1/64
+ipv6 address FE80::1 link-local 
+no shutdown
+exit
+
+interface fastethernet 0/1
+ipv6 address 2001:DAD:6144:12::1/64
+ipv6 address FE80::1 link-local 
+no shutdown
+exit
+
+interface fastethernet 1/0
+ipv6 address 2001:DAD:6144:24::1/64
+ipv6 address FE80::1 link-local 
+no shutdown
+exit
+
+interface fastethernet 1/1
+ipv6 address 2001:DAD:6144:36::1/64
+ipv6 address FE80::1 link-local 
+no shutdown
+exit
+
+// S1
+enable
+clock set 19:00:00 25 september 2018
+configure terminal
+No  IP  domain-lookup
+hostname S1
+sdm prefer dual-ipv4-and-ipv6 default 
+exit
+reload
+---------------------------------------
+le das que y
+le das enter
+---------------------------------------
+enable
+configure terminal
+ipv6 unicast-routing
+in vlan 1
+ipv6 enable
+ipv6 address 2001:DAD:6144:6::2
+no shut
+exit
+
+// S2
+enable
+clock set 19:00:00 25 september 2018
+configure terminal
+No  IP  domain-lookup
+hostname S2
+sdm prefer dual-ipv4-and-ipv6 default 
+exit
+reload
+---------------------------------------
+le das que y
+le das enter
+---------------------------------------
+enable
+configure terminal
+ipv6 unicast-routing
+in vlan 1
+ipv6 enable
+ipv6 address 2001:DAD:6144:12::2/64
+no shut
+exit
+
+// S3
+enable
+clock set 19:00:00 25 september 2018
+configure terminal
+No  IP  domain-lookup
+hostname S3
+sdm prefer dual-ipv4-and-ipv6 default 
+exit
+reload
+---------------------------------------
+le das que y
+le das enter
+---------------------------------------
+enable
+configure terminal
+ipv6 unicast-routing
+in vlan 1
+ipv6 enable
+ipv6 address 2001:DAD:6144:24::2/64
+no shut
+exit
+
+// S4
+enable
+clock set 19:00:00 25 september 2018
+configure terminal
+No  IP  domain-lookup
+hostname S4
+sdm prefer dual-ipv4-and-ipv6 default 
+exit
+reload
+---------------------------------------
+le das que y
+le das enter
+---------------------------------------
+enable
+configure terminal
+ipv6 unicast-routing
+in vlan 1
+ipv6 enable
+ipv6 address 2001:DAD:6144:36::2/64
+no shut
+exit
+

@@ -1,0 +1,94 @@
+// Contraseña
+enable
+configure terminal
+enable secret abc
+line console 0
+password abc
+login
+banner motd #No Entres# login
+service password-encryption
+enable secret abc
+line vty 0 15
+password abc
+login
+banner motd #No Entres# login
+service password-encryption
+
+
+//Router 1
+enable
+clock set 19:00:00 1 october 2018
+config terminal
+No  IP  domain-lookup
+hostname R1
+
+int f 0/0
+ip add 168.168.6.126 255.255.255.128
+no shutdown
+exit
+
+int f 0/1
+ip add 168.168.6.190 255.255.255.192
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.2.3.1 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+ip route 172.154.6.0 255.255.255.128 serial 0/3/0
+ip route 172.154.6.128 255.255.255.224 serial 0/3/0
+//Router 2
+enable
+clock set 19:00:00 1 october 2018
+config terminal
+No  IP  domain-lookup
+hostname R2
+
+int f 0/0
+ip add 172.154.6.126 255.255.255.128
+no shutdown
+exit
+
+int f 0/1
+ip add 172.154.6.158 255.255.255.224
+no shutdown
+exit
+
+int serial 0/3/0
+ip add 1.2.3.2 255.255.255.252
+clock rate 9600
+no shutdown
+exit
+
+ip route 168.168.6.0 255.255.255.128 serial 0/3/0
+ip route 168.168.6.128 255.255.255.192 serial 0/3/0
+
+// S1
+enable
+clock set 19:00:00 1 october 2018
+config terminal
+No  IP  domain-lookup
+hostname S1
+// S2
+enable
+clock set 19:00:00 1 october 2018
+config terminal
+No  IP  domain-lookup
+hostname S2
+// S3
+enable
+clock set 19:00:00 1 october 2018
+config terminal
+No  IP  domain-lookup
+hostname S3
+// S4
+enable
+clock set 19:00:00 1 october 2018
+config terminal
+No  IP  domain-lookup
+hostname S4
+
+
